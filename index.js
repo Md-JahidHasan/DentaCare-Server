@@ -17,7 +17,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run(){
     try{
         const servicesCollction = client.db('dentaCareDb').collection('services');
-        const reviewCollection = client.db('denalCareDb').collection('services')
+        const reviewCollection = client.db('dentaCareDb').collection('reviews');
         
         // services API
         app.get('/services', async(req, res)=>{
@@ -40,6 +40,12 @@ async function run(){
             const reviews = req.body;
             const result = await reviewCollection.insertOne(reviews);
             res.send(result)
+        })
+        app.get('/reviews', async(req, res)=>{
+            const query = {};
+            const cursor = reviewCollection.find(query);
+            const reviews = await cursor.toArray();
+            req.send(reviews)
         })
 
     }

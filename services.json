@@ -2,7 +2,8 @@
     {
     "name": "Dental Checkup",
     "picture": "https://www.woodbridgedental.co.uk/wp-content/uploads/2020/03/dental-checkup-guildford.jpg",
-    "rating": 40,
+    "rating": 4,
+    "price": 140,
     "time": "1.5hrs",
     "description": "If you have not been to the dentist in a while, I invite you to schedule your dental checkup with Smiles Dental Care. At my Mountain View dental office, I treat patients of all ages, focusing on improving the health and appearance of our patients' smiles. I understand that not everyone is excited about dental care. I also understand that due to busy schedules, a lack of insurance, or general forgetfulness, people do not visit the dentist with any regularity. If that is you, do not worry; you are not alone. According to the USA Today, 34 percent of Americans do not visit the dentist on an annual basis. While this is a large group of people, not having a dental checkup can place you at risk for a variety of health issues. We encourage you to take an hour out of your day for the benefit of your oral health and your future quality of life. To get started, all you need to do is call (650) 563-1180 and schedule an appointment. Our friendly staff will not judge you for your lack of prior dental care but will be happy to get you up to speed again.",
     "details":[
@@ -28,6 +29,7 @@
     "name": "Dental Crowns & Bridge",
     "picture": "https://www.alamospringsdental.com/blog/wp-content/uploads/2019/12/AdobeStock_279747898__1576159907_87504.jpg",
     "rating": 5,
+    "price": 150,
     "time": "6 days (appoximately 3hours per day)",
     "description": "At my Dental Care, I provide dental crowns and bridges for patients throughout the Mountain View area. These procedures are extremely effective for restoring a tooth that has become infected, damaged or has fallen out. We can complete these procedures in a way that looks natural while resolving oral health issues. This way, a patient can regain the functionality of their tooth without giving the appearance of any dental work. If you live in Mountain View, CA call (650) 563-1180 to schedule your appointment so that you can learn more about dental crowns and dental bridges.",
     "details":[
@@ -53,6 +55,7 @@
     "name": "Dental Implants",
     "picture": "https://www.vervedental.com.au/wp-content/uploads/2022/05/Dental-implant.jpeg",
     "rating": 4.5,
+    "price": 140,
     "time": "15 days (appoximately 4 hours per day)",
     "description": "Missing teeth can be embarrassing, causing people to hide their smile and lose their self-esteem. The space that missing teeth create can easily become infected with bacteria, causing other teeth to shift out of place, and making it difficult for people to speak or eat correctly. The team at Smiles Dental Care are sensitive to the hardship a missing tooth can create. We provide dental implants so that our patients can regain their self-confidence, improve their health, and approach life boldly. Installing implants is a complex procedure that requires us to replace their missing teeth in a safe and natural way. We know that there are multiple dental providers to choose from, so the team at Smiles Dental Care are constantly looking for ways to improve the overall experience of our patients. Our office is located in Mountain View and we offer patients the opportunity to restore missing teeth in a way that looks natural and beautiful.",
     "details":[
@@ -78,6 +81,7 @@
     "name": "Dental Veneers and Dental Laminates",
     "picture": "https://elevatedental.ph/wp-content/uploads/2018/02/porcelain-laminate-veneer.jpg",
     "rating": 5,
+    "price": 110,
     "time": "3 days (appoximately 4 hours per day)",
     "description": "I provide dental veneers so that patients can restore damaged teeth or transform their smile into something beautiful. At my Dental Care I often treat patients that have a variety of dental concerns. Some patients visit  my office because they break their tooth, while others are looking to create a Hollywood smile. Most people are candidates for the procedure as long as their tooth structure and roots are in place. If, however, you have a cavity or gum disease, this will need to be treated before we complete the procedure. If you want to learn more about dental veneers, we recommend that you call (650) 563-1180 to schedule an appointment. We are a provider of veneers and can let you know if they will help you to achieve the goals that you have for your smile.",
     "details":[
@@ -107,6 +111,7 @@
     "name": "Teeth Whitening",
     "picture": "https://www.preferreddentalcaresantarosa.com/wp-content/uploads/2020/02/Is-Dental-Tartar-Cleaning-Dangerous-min.jpg",
     "rating": 4.5,
+    "price": 100,
     "time": "3 hours",
     "description": "If you live in Mountain View or the local area, you can benefit from a teeth whitening procedure at my local dental office. At Smiles Dental Care, we are known for improving the appearance of our patients' smiles. We are a cosmetic dentist and has multiple ways for doing so. We often recommend a teeth bleaching procedure because it is by far the easiest way to transform your smile. After cleaning your teeth, we can complete this procedure in time for a special event or as part of your regular oral health routine.",
     "details":[
@@ -132,6 +137,7 @@
     "name": "Root Canal Treatment",
     "picture": "https://www.raghavhealthcare.com/images/root-canal-treatment-in-bangalore.jpg",
     "rating": 5,
+    "price": 240,
     "time": "9 days (appoximately 3 hours per day)",
     "description": "At my Dental Care, I regularly perform a root canal endodontic treatment in order to remove infections and save our patients' teeth. I can complete the procedure and work to keep patients comfortable. Root canals are a common procedure. If you live in the Mountain View area and are currently experiencing tooth pain, we invite you to call (650) 563-1180 to schedule an appointment and see if you need a root canal endodontic treatment.",
     "details":[

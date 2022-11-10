@@ -54,11 +54,13 @@ async function run(){
         })
 
     }
-    finally{}
+    finally{
+
+    }
+
 }
-run().catch(err=>console.log(err))
-
-
+run()
+.catch(err=>console.log(err))
 
 app.get('/', (req, res)=>{
     res.send('DentaCare API is running')

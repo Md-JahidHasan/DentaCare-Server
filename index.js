@@ -15,6 +15,25 @@ app.use(express.json());
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.ptptzcl.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
+
+// jwt token verify function
+function verifyJWT(req, res, next){
+    const authHeader = req.headers.authorization;
+    if(!authHeader){
+        return res.status(401).send({message:'Unauthorized Access'})
+    }
+    const token = authHeader.split(' ')[1];
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function(err, decoded){
+        if(err){
+            return res.status(403).send({message:'forbidden access'})
+        }
+        req.decoded = decoded;
+        next()
+    })
+}
+
+
+
 async function run(){
     try{
         const servicesCollction = client.db('dentaCareDb').collection('services');
@@ -56,8 +75,23 @@ async function run(){
             const result = await reviewCollection.insertOne(reviews);
             res.send(result)
         })
-        app.get('/reviews', async(req, res)=>{
+        app.get('/service-reviews', async(req, res)=>{
             const query = {};
+            const cursor = reviewCollection.find(query);
+            const reviews = await cursor.toArray();
+            res.send(reviews)
+        })
+        app.get('/reviews', verifyJWT, async(req, res)=>{
+            const decoded =req.decoded;
+            if(decoded.email !== req.query.email){
+                res.status(403).send({message: 'unauthorized access'})
+            }
+            let query = {};
+            if(req.query.email){
+                query = {
+                    email: req.query.email
+                }
+            }
             const cursor = reviewCollection.find(query);
             const reviews = await cursor.toArray();
             res.send(reviews)
@@ -65,7 +99,6 @@ async function run(){
 
     }
     finally{
-
     }
 
 }
@@ -78,3 +111,4 @@ app.get('/', (req, res)=>{
 app.listen(port, ()=>{
     console.log(`DentaCare Server running on port ${port}`);
 })
+

@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const jwt = require('jsonwebtoken')
 require('dotenv').config();
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
@@ -19,6 +20,15 @@ async function run(){
         const servicesCollction = client.db('dentaCareDb').collection('services');
         const reviewCollection = client.db('dentaCareDb').collection('reviews');
         
+        // json web token
+        app.post('/jwt', (req, res)=>{
+            const user = req.body;
+            console.log(user); 
+            const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '5h'})
+            res.send({token})
+        })
+
+
         // services API
         app.get('/services', async(req, res)=>{
             const query = {};
